@@ -1,0 +1,274 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'popins',sans-serif;
+}
+body{
+    background: #000;
+    color:#fff;
+}
+.header{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./header-image.png);
+    padding: 10px 8%;
+    background-position: center;
+    background-size: cover;
+    position:relative;
+}
+nav{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 10px;
+}
+.logo{
+    width:150px;
+    padding: 10p 20px;
+}
+nav button{
+    border:0;
+    outline:0;
+    cursor:pointer;
+    padding:10px 20px;
+    background-color: #db0001;
+    color:#fff;
+    border-radius:4px;
+    margin-left:10px;
+    font-size:12px;
+}
+.language-button{
+    align-items: center;
+    border:1px solid #fff;
+    cursor:pointer;
+    background: transparent;
+}
+.language-button img{
+    width:10px;
+    margin-left:10px;
+}
+.header-content{
+    position: absolute;
+    top:50%;
+    left:50%;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    margin-top:100px;
+}
+.header-content h1{
+    font-size: 60px;
+    line-height:70px;
+    max-width: 650px;
+    font-weight:600;
+}
+.header-content h3{
+    font-weight:400;
+    margin-bottom:20px;
+}
+.email-signup{
+   background-color: #fff;
+   align-items: center;
+   display: flex;
+   border-radius: 4px;
+   margin-top: 30px;
+   overflow: hidden;
+}
+.email-signup input{
+    flex:1;
+    border:0;
+    outline:0;
+    margin-left:20px;
+}
+.email-signup button{
+    border:0;
+    outline:0;
+    background-color: #db0001;
+    cursor:pointer;
+    padding:15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    color:#ffff;
+}
+.features{
+    padding:50px 12%;
+    font-size:22px;
+}
+.row{
+    display: flex;
+    width:100%;
+    align-items:center;
+    flex-wrap: wrap;
+    padding:50px 0px;
+}
+.text-col{
+    flex-basis:50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img{
+    display: block;
+    width:90%;
+    margin:auto;
+}
+.features h2{
+    font-size: 50px;
+    font-weight:600;
+}
+.faq{
+    font-size: 18px;
+    padding:10px 12%;
+    text-align: center;
+}
+.faqh2{
+    font-weight:500;
+    font-size:40px;
+}
+.accordino{
+    margin:60px auto;
+    width:100%;
+    max-width: 650px;
+}
+.accordino li{
+    list-style: none;
+    width:100%;
+    padding:5px;
+}
+.accordino li label{
+    display:flex;
+    align-items:center;
+    padding:20px;
+    font-size: 18px;
+    font-weight:500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor:pointer;
+    position:relative;
+}
+label::after{
+    content:"+";
+    font-size:34px;
+    position:absolute;
+    right:20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordino .content{
+    background: #303030;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    padding:0 20px;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordino input[type="radio"]:checked + label + .content{
+    max-height:650px;
+    padding:30px;
+}
+.accordino input[type="radio"]:checked + label::after{
+   transform: rotate(135deg);
+}
+.faq .email-signup{
+    max-width: 600px;
+    margin:20px auto 60px;
+}
+.faq small{
+    font-size:15px;
+}
+
+
+.fotter{
+    padding:10px 15% 10px;
+    border-top:6px solid #333;
+    color:#777;
+}
+.fotter h2{
+    font-size:18px;
+    font-weight:400;
+    margin-bottom:30px;
+}
+.fotter .col{
+    flex-basis: 25%;
+    flex-wrap: 1;
+    margin-bottom: 20px;
+}
+.fotter .col a{
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    color:#777;
+    margin-bottom: 10px;
+}
+.fotter .row{
+    align-items: flex-start;
+}
+.fotter .language-button{
+    color:#fff;
+    padding:10px 20px;
+    border-radius: 4px;
+}
+.txt-copy{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+/*----------------------Media queries On screen ------------------*/
+@media only screen and (max-width:600px){
+    .logo{
+        width:100px;
+    }
+    nav button{
+        padding:5px 10px;
+    }
+    nav .language-button{
+        padding:4px 8px;
+    }
+    .header-content{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+    .header-content h1{
+        font-size:30px;
+    }
+    .email-signup button{
+        font-size: 12px;
+        padding:10px 15px;
+    }
+    .text-col, .img-col{
+        flex-basis: 100%;
+    }
+    .features h2{
+        font-size: 30px;
+    }
+    .features p{
+        font-size: 15px;
+    }
+    .row:nth-child(2),.row:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .features .row{
+        padding:10px 0;
+    }
+    .faq h2{
+        font-size: 20px;
+    }
+    .accordino .content{
+        font-size: 14px;
+    }
+    .accordino li label{
+        padding:10px;
+        font-size: 14px;
+    }
+    label:after{
+        font-size: 22px;
+    }
+}
